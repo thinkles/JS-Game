@@ -1,0 +1,124 @@
+
+
+
+<!-- 
+    实现思路 : 
+    1. 使用数组,随机排序(随机生成索引,对原来的数组进行交换)之后,赋值给各个纸牌的DOM对象的background的属性,并为每个DOM对象绑定click事件
+    2. 书写flip函数, 使用数组存储 触发click事件的dom对象, 判断数组的length
+    length<2时,进行添加类
+    length>2时, 不在进行添加 on类,即不再进行翻转纸牌
+    length==2时,进行判断两个纸牌是否一样, 一样分数加一 不一样,一段时间后再次翻转,清空数组
+    3. Timer() 倒计时功能 , 使用setinterval() 每一秒运行一次修改时间
+    4. 翻转效果 : 使用css taransition transform 进行绕y轴旋转,  使用backface-visibility 完成翻转
+     perspective  transform-style: preserve-3d; 营造立体的3d效果
+--> 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>memory game</title>
+     <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="main">
+
+        <div class="card">
+            <div class="container">
+                <div class="back"></div>
+                <div class="front"></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="container">
+                <div class="back"></div>
+                <div class="front"></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="container">
+                <div class="back"></div>
+                <div class="front"></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="container">
+                <div class="back"></div>
+                <div class="front"></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="container">
+                <div class="back"></div>
+                <div class="front"></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="container">
+                <div class="back"></div>
+                <div class="front"></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="container">
+                <div class="back"></div>
+                <div class="front"></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="container">
+                <div class="back"></div>
+                <div class="front"></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="container">
+                <div class="back"></div>
+                <div class="front"></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="container">
+                <div class="back"></div>
+                <div class="front"></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="container">
+                <div class="back"></div>
+                <div class="front"></div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="container">
+                <div class="back"></div>
+                <div class="front"></div>
+            </div>
+        </div>
+
+    </div>
+    <div class="score">
+        <p class="defen"></p>
+    </div>
+    <div class="timer">
+        <p class="time"></p>
+    </div>
+    <div class="end">
+        <h1 class="test"></h1>
+        <p class="scoretext">Score: </p>
+        <button class="enbutton">Play again</button>
+    </div>
+</body>
+<script src="./main.js">
+    
+</script>
+
+</html>
+<!-- 
+    另一种思路 :
+   1. 可以不用提前在html 中添加所有牌的标签, 可以再设置好css之后,通过脚本生成 节点, 插入所有的牌
+   2. 随机排序算法, 还可以使用 findimg项目中的算法, 利用random()和0.5比较 ,这里使用的随机排序算法,
+   是随机 生成一个索引,来和别的索引交换位置
+   3.  存储翻过牌的信息可以不用数组,直接使用获得节点的方法 例如 quereyselectorAll() 返回一个伪元素使用  -->

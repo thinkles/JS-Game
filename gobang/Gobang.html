@@ -1,0 +1,36 @@
+<!--
+ * @Author: yangsir
+ * @Date: 2021-02-21 18:25:44
+ * @LastEditTime: 2021-02-21 18:46:13
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>五子棋游戏</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="main">
+        <canvas id="canvas" width="600px" height="600px"> </canvas>
+    </div>
+
+
+
+</body>
+
+</html>
+
+
+<!-- 
+    五子棋的三种实现方法:
+    1. 使用二维数组遍历 每一个 棋子,  检查该棋子的8个方向(使用递归函数),  穷举法 每个棋子都遍历
+    2. 使用8个循环 4个变量代替四条方向线, 找到变量加一 ,找不到 就退出循环
+   3.  一个方向线,使用一个循环嵌套两个if ,两个布尔值代替一个方向线的两个方向, 
+   当棋子被截断后布尔变量变换,使得一个if不在判断  
+
+ -->

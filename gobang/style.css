@@ -1,0 +1,12 @@
+.main {
+    background-color: antiquewhite;
+    width: 50%;
+    height: 60%;
+    margin: 10px auto;
+}
+
+#canvas {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}

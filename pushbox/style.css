@@ -1,0 +1,24 @@
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .main {
+        position: relative;
+        height: 100%;
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .button {
+        text-align: center;
+        width: 600px;
+    }
+
+    .button button {
+
+        width: 100px;
+        height: 50px;
+        margin-left: 10px;
+        font-size: large;
+    }

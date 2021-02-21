@@ -1,0 +1,37 @@
+<!-- 
+v0.4
+
+1. 上传文件,  使用自定义文件进行设计拼图
+
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>拼图游戏0.4</title>
+ <link href="./style.css" rel="stylesheet">
+</head>
+
+<body>
+
+  <div>
+<form id="form">
+    <label for="select">难度选择 :</label>
+    <select id="select" >
+        <optgroup label="难度:"></optgroup>
+        <option value="3" selectd>简单</option>
+        <option value="4">中等</option>
+        <option value="5">困难</option>
+    </select>
+    <label for="input">上传文件: </label>
+    <input type="file" id="file" accept="image/*">
+    
+</form>
+    <canvas id="canvas" width="720" height="720">
+    </canvas>
+  </div>
+<script src="./main.js"></script>
+</body>
+
+</html>
